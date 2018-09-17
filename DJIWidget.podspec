@@ -13,8 +13,8 @@ http://developer.dji.com/policies/eula/
     LICENSE
     }
 
-    s.homepage = 'https://github.com/gzkiwiinc/Mobile-SDK-iOS'
-    s.source = { :git => 'git@github.com:gzkiwiinc/Mobile-SDK-iOS.git', :tag => "w#{s.version}"}
+    s.homepage = 'https://github.com/gzkiwiinc/DJIWidget'
+    s.source = { :git => 'git@github.com:gzkiwiinc/DJIWidget.git', :tag => "kw#{s.version}"}
     s.summary = 'DJIWidget'
     s.platform = :ios, '10.0'
 
