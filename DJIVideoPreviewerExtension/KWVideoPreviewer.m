@@ -10,6 +10,12 @@
 
 @implementation KWVideoPreviewer
 
++ (instancetype)instance {
+    // DJIVideoPreviewer 里面 instance 方法返回 instancetype，+ (instancetype)instance
+    // 但头文件没有改过来，所以这里需要 override
+    return (KWVideoPreviewer *)[super instance];
+}
+
 - (void)videoProcessFrame:(VideoFrameYUV *)frame {
     if ([self.delegate respondsToSelector:@selector(kwVideoPreviewer:willProcessImageBuffer:)]) {
         CVImageBufferRef imageBuffer = (CVImageBufferRef)CFRetain((CFTypeRef)[self convertToImageBufferFromYUVFrame:frame]);

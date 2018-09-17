@@ -20,4 +20,6 @@
 
 @property (nonatomic, weak, nullable) id <KWVideoPreviewerDelegate> delegate;
 
++ (instancetype)instance;
+
 @end
