@@ -142,6 +142,8 @@
 		2E54A3741F4A906C00916B4D /* DJIVideoPoolStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E54A32E1F4A906C00916B4D /* DJIVideoPoolStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E54A3751F4A906C00916B4D /* DJIVideoPreviewer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E54A32F1F4A906C00916B4D /* DJIVideoPreviewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E54A3761F4A906C00916B4D /* DJIVideoPreviewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E54A3301F4A906C00916B4D /* DJIVideoPreviewer.m */; };
+		982ACE802150C7DF00DF6D67 /* KWVideoPreviewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 982ACE7E2150C7DF00DF6D67 /* KWVideoPreviewer.m */; };
+		982ACE812150C7DF00DF6D67 /* KWVideoPreviewer.h in Headers */ = {isa = PBXBuildFile; fileRef = 982ACE7F2150C7DF00DF6D67 /* KWVideoPreviewer.h */; };
 		9C7E332E2111D7D700A2D60E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7E332D2111D7D700A2D60E /* Foundation.framework */; };
 		BE818BE020F8CD5900DE4B4D /* DJIMavic2ProCameraImageCalibrateFilterDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BE818BDC20F8CD5800DE4B4D /* DJIMavic2ProCameraImageCalibrateFilterDataSource.m */; };
 		BE818BE120F8CD5900DE4B4D /* DJIMavic2ZoomCameraImageCalibrateFilterDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BE818BDD20F8CD5900DE4B4D /* DJIMavic2ZoomCameraImageCalibrateFilterDataSource.m */; };
@@ -317,6 +319,8 @@
 		2E54A7A31F4C364800916B4D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		2E54A7A91F4C537300916B4D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2EBAA9C81FB064BE00E26B31 /* DJIWidgetPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJIWidgetPrefix.pch; sourceTree = "<group>"; };
+		982ACE7E2150C7DF00DF6D67 /* KWVideoPreviewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWVideoPreviewer.m; sourceTree = "<group>"; };
+		982ACE7F2150C7DF00DF6D67 /* KWVideoPreviewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWVideoPreviewer.h; sourceTree = "<group>"; };
 		9C7E332D2111D7D700A2D60E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BE818BDC20F8CD5800DE4B4D /* DJIMavic2ProCameraImageCalibrateFilterDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJIMavic2ProCameraImageCalibrateFilterDataSource.m; sourceTree = "<group>"; };
 		BE818BDD20F8CD5900DE4B4D /* DJIMavic2ZoomCameraImageCalibrateFilterDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJIMavic2ZoomCameraImageCalibrateFilterDataSource.m; sourceTree = "<group>"; };
@@ -512,6 +516,7 @@
 		2E54A2CF1F4A904000916B4D /* DJIWidget */ = {
 			isa = PBXGroup;
 			children = (
+				982ACE7D2150C7DF00DF6D67 /* DJIVideoPreviewerExtension */,
 				BEBC14241FE14AA1005ED3F9 /* DJISymbols.h */,
 				2E54A2D01F4A904000916B4D /* DJIWidget.h */,
 				2EBAA9C81FB064BE00E26B31 /* DJIWidgetPrefix.pch */,
@@ -744,6 +749,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		982ACE7D2150C7DF00DF6D67 /* DJIVideoPreviewerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				982ACE7E2150C7DF00DF6D67 /* KWVideoPreviewer.m */,
+				982ACE7F2150C7DF00DF6D67 /* KWVideoPreviewer.h */,
+			);
+			path = DJIVideoPreviewerExtension;
+			sourceTree = SOURCE_ROOT;
+		};
 		BE7C20C220F0DCB200946E10 /* PixelBufferProvider */ = {
 			isa = PBXGroup;
 			children = (
@@ -895,6 +909,7 @@
 				0282DA6F21290E3E00D8F1E0 /* DJILiveViewCalibrateFilter.h in Headers */,
 				2E54A33C1F4A906C00916B4D /* DJIVideoHelper.h in Headers */,
 				2E54A3601F4A906C00916B4D /* DJILiveViewRenderHSBFilter.h in Headers */,
+				982ACE812150C7DF00DF6D67 /* KWVideoPreviewer.h in Headers */,
 				2E54A34E1F4A906C00916B4D /* DJILiveViewRenderCommon.h in Headers */,
 				2E54A3661F4A906C00916B4D /* DJILiveViewRenderScaleFilter.h in Headers */,
 				2E54A3581F4A906C00916B4D /* DJILiveViewRenderProgram.h in Headers */,
@@ -1030,6 +1045,7 @@
 				144F340720FD936C005E4662 /* DJICustomVideoFrameExtractor.m in Sources */,
 				2E54A34F1F4A906C00916B4D /* DJILiveViewRenderCommon.m in Sources */,
 				2E54A3381F4A906C00916B4D /* DJIJpegStreamImageDecoder.m in Sources */,
+				982ACE802150C7DF00DF6D67 /* KWVideoPreviewer.m in Sources */,
 				D7F699F7201863DD0023C693 /* DJIImageCalibrateColorConverter.m in Sources */,
 				2E54A36B1F4A906C00916B4D /* DJILiveViewRenderPicutre.m in Sources */,
 				D7BB1392201076CC00C3E3D5 /* DJIImageCalibrateFilterDataSource.m in Sources */,
