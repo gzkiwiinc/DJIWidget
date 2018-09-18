@@ -11,8 +11,9 @@
 @implementation KWVideoPreviewer
 
 + (instancetype)instance {
-    // DJIVideoPreviewer 里面 instance 方法返回 instancetype，+ (instancetype)instance
-    // 但头文件没有改过来，所以这里需要 override
+    // DJIVideoPreviewer.m 里面 instance 方法返回 instancetype，
+    // 但头文件中的声明还没有改过来，返回类型仍然是 DJIVideoPreviewer *，
+    // 所以这里需要 override
     return (KWVideoPreviewer *)[super instance];
 }
 
@@ -26,12 +27,10 @@
 }
 
 - (CVImageBufferRef)convertToImageBufferFromYUVFrame:(VideoFrameYUV *)yuvFrame {
-    // TODO: 是否有必要加锁
     OSType pixelFormatType = 0;
     
-    // 这里的格式选取逻辑不确定，可能会有问题，需要注意
     if (yuvFrame->frameType == VPFrameTypeYUV420Planer) {
-        pixelFormatType = kCVPixelFormatType_420YpCbCr8Planar;
+        pixelFormatType = kCVPixelFormatType_420YpCbCr8PlanarFullRange;
     } else if (yuvFrame->frameType == VPFrameTypeYUV420SemiPlaner) {
         pixelFormatType = kCVPixelFormatType_420YpCbCr8BiPlanarFullRange;
     } else {
